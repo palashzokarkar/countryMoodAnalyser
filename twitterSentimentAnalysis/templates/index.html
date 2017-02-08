@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sentiment analysis</title>
+</head>
+<body>
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit" />
+</form>
+
+<ul>
+	<li>nitin</li>
+</ul>
+{% for issue in trending_issues %}
+	<ul>
+		<li>nitin</li>
+		<li>{{ issue }}</li>
+
+	</ul>
+{% endfor %}
+
+
+</body>
+</html>
+
+
