@@ -28,11 +28,11 @@ def country_dropDown(request):
         # create a form instance and populate it with data from the request:
         form = NameForm(request.POST)
         # check whether it's valid:
-        print form
+        
         if form.is_valid():
             # process the data in form.cleaned_data as required
             # ...
-            # redirect to a new URL:
+            # redirect to a` new URL:
             selected_country =  form.cleaned_data['countries_drop_down']    
             
             # get woeid for the country selected
@@ -49,7 +49,7 @@ def country_dropDown(request):
                 print str(e)
 
             for tweet in result[0]['trends']:
-               # trending_issues.append(tweet['name'])
+               trending_issues.append(tweet['name'])
                print tweet['name']
 
             print trending_issues    
